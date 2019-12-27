@@ -1,0 +1,168 @@
+﻿<Window x:Class="WPFPresentationLayer.frmCharacter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPresentationLayer"
+        mc:Ignorable="d"
+        Title="frmCharacter" Height="450" Width="450" Loaded="Window_Loaded" Background="#1c1c1c">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="Labels">
+                <Setter Property="Background" Value="#34363b"/>
+                <Setter Property="Foreground" Value="#FF837B7B"/>
+            </Style>
+            <Style TargetType="TextBox" x:Key="TextBoxes">
+                <Setter Property="Background" Value="#34363b"/>
+                <Setter Property="Foreground" Value="#FF837B7B"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="#34363b"/>
+                <Setter Property="Foreground" Value="#FF837B7B"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Name</Label>
+                <TextBox x:Name="txtCharacterName" IsReadOnly="True" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  Style="{StaticResource Labels}">Race</Label>
+                <TextBox x:Name="txtRace" IsReadOnly="True" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  Style="{StaticResource Labels}">HP</Label>
+                <TextBox x:Name="txtHPMax" IsReadOnly="True" Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  Style="{StaticResource Labels}">AC</Label>
+                <TextBox x:Name="txtAC" IsReadOnly="True" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+                <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  Style="{StaticResource Labels}">Prof</Label>
+                <TextBox x:Name="txtProf" IsReadOnly="True" Grid.Column="1" Grid.Row="4" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblStrength" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Strength</Label>
+            <TextBox x:Name="txtStrength" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblDexterity" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Dexterity</Label>
+            <TextBox x:Name="txtDexterity" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblConstitution" Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Constitution</Label>
+            <TextBox x:Name="txtConstitution" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblIntelligence" Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Intelligence</Label>
+            <TextBox x:Name="txtIntelligence" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblWisdom" Grid.Column="0" Grid.Row="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Wisdom</Label>
+            <TextBox x:Name="txtWisdom" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblCharisma" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource Labels}">Charisma</Label>
+            <TextBox x:Name="txtCharisma" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnStrengthCheck" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnStrengthCheck_Click">Str Check</Button>
+            <TextBox x:Name="txtStrengthResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnDexterityCheck" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnDexterityCheck_Click">Dex Check</Button>
+            <TextBox x:Name="txtDexterityResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnConstitutionCheck" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnConstitutionCheck_Click">Con Check</Button>
+            <TextBox x:Name="txtConstitutionResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnIntelligenceCheck" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnIntelligenceCheck_Click">Int Check</Button>
+            <TextBox x:Name="txtIntelligenceResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnWisdomCheck" Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnWisdomCheck_Click">Wis Check</Button>
+            <TextBox x:Name="txtWisdomResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnCharismaCheck" Grid.Column="0" Grid.Row="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnCharismaCheck_Click">Cha Check</Button>
+            <TextBox x:Name="txtCharismaResult" IsReadOnly="True" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Style="{StaticResource TextBoxes}"></TextBox>
+        </Grid>
+        <Image x:Name="imgClass" Grid.Column="0" Grid.Row="0"></Image>
+        <Button x:Name="btnEdit" Grid.Column="1" Grid.Row="7" Content="Edit" Click="BtnEdit_Click"></Button>
+        <Button x:Name="btnSave" Grid.Column="1" Grid.Row="7" Content="Save" Visibility="Hidden" Click="BtnSave_Click"></Button>
+        <Button x:Name="btnExit" Grid.Column="2" Grid.Row="7" Content="Exit" Click="BtnExit_Click"></Button>
+    </Grid>
+</Window>
